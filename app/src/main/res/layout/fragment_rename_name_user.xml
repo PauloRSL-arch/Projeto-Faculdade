@@ -1,0 +1,87 @@
+<!-- res/layout/fragment_half_screen_dialog.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/dialog_backgroud"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:id="@+id/ConfirmarSaida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voce tem certeza?"
+            android:textSize="@dimen/text_size"
+            android:layout_gravity="center"
+            />
+
+        <EditText
+            android:layout_marginTop="@dimen/margin_butttonHome"
+            android:background="@color/Gainboro"
+            android:padding="@dimen/padding_interno_botao"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/black"
+            android:id="@+id/confirmEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Rename_email"
+            android:textColorHint="@color/black"
+
+            />
+        <EditText
+            android:layout_marginTop="@dimen/margin_butttonHome"
+
+            android:background="@color/Gainboro"
+            android:padding="@dimen/padding_interno_botao"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/black"
+            android:id="@+id/novoNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Rename_name"
+            android:textColorHint="@color/black"
+            android:drawableEnd="@drawable/baseline_remove_red_eye_24"
+
+            />
+        <EditText
+            android:layout_marginTop="@dimen/margin_butttonHome"
+
+            android:background="@color/Gainboro"
+            android:padding="@dimen/padding_interno_botao"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/black"
+            android:id="@+id/SenhaNova"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite sua senha nova"
+            android:textColorHint="@color/black"
+            android:drawableEnd="@drawable/baseline_remove_red_eye_24"
+
+
+            />
+        <Button
+            android:textSize="@dimen/text_size"
+            android:id="@+id/Button_confirmar_rename"
+            android:layout_marginTop="16dp"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Confirmar"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

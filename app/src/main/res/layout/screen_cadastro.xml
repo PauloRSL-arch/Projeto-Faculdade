@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/menuBar_screen_cadastro"
+        android:background="?attr/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:title="Cadastro"
+        app:titleTextColor="@color/white"
+        android:fitsSystemWindows="true"
+        />
+    <LinearLayout
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="20dp"
+        >
+        <EditText
+            android:background="@color/Gainboro"
+            android:padding="@dimen/padding_interno_botao"
+            android:id="@+id/name_completo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/Edit_name"
+            android:inputType="text"
+            android:textSize="@dimen/text_size_edit"
+            android:layout_marginTop="@dimen/margin_edit_top"
+            />
+        <EditText
+            android:background="@color/Gainboro"
+            android:padding="@dimen/padding_interno_botao"
+            android:id="@+id/cpf_user"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/Edit_cpf"
+            android:inputType="text"
+            android:textSize="@dimen/text_size_edit"
+            android:layout_marginTop="@dimen/margin_edit_top"
+            />
+        <EditText
+            android:background="@color/Gainboro"
+            android:padding="@dimen/padding_interno_botao"
+            android:id="@+id/email_cadastro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/Edit_Email"
+            android:inputType="textEmailAddress"
+            android:textSize="@dimen/text_size_edit"
+            android:layout_marginTop="@dimen/margin_edit_top"
+            />
+
+        <EditText
+            android:background="@color/Gainboro"
+            android:padding="@dimen/padding_interno_botao"
+            android:id="@+id/senha_cadastro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/Edit_Senha"
+            android:inputType="textPassword"
+            android:textSize="@dimen/text_size_edit"
+            android:layout_marginTop="@dimen/margin_edit_top"
+            android:drawableEnd="@drawable/baseline_remove_red_eye_24"
+            />
+        <EditText
+            android:background="@color/Gainboro"
+            android:padding="@dimen/padding_interno_botao"
+            android:id="@+id/confirma_senha"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/Confirma_senha"
+            android:inputType="textPassword"
+            android:textSize="@dimen/text_size_edit"
+            android:layout_marginTop="@dimen/margin_edit_top"
+            android:drawableEnd="@drawable/baseline_remove_red_eye_24"
+
+            />
+        <TextView
+            android:id="@+id/check8Letras"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Utilizar 8 ao mais letras"
+            />
+        <TextView
+            android:id="@+id/checkMaiuscula"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Conter uma letra maiuscula"
+            />
+        <TextView
+            android:id="@+id/checkCaracterEspecial"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Conter um caracter especial"
+            />
+        <Button
+            android:id="@+id/button_cadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/Button_cadastrar"
+            android:textSize="@dimen/Button_text"
+            android:layout_marginTop="@dimen/margin_edit_top"
+            />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

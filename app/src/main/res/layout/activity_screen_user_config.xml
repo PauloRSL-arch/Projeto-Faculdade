@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.screenUser.ScreenUserConfig"
+    android:orientation="vertical"
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/menuBar_screen_config"
+        android:background="?attr/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:title="Configuracão Usuario"
+        app:titleTextColor="@color/white"
+        android:fitsSystemWindows="true"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="60sp"
+            >
+
+            <Button
+                android:background="@drawable/buttons"
+                android:id="@+id/alterarNameUser"
+                android:textSize="@dimen/text_size"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_butttonHome"
+                android:text="Alterar nome do usuario"/>
+            <Button
+                android:background="@drawable/buttons"
+                android:id="@+id/alterarSenha"
+                android:textSize="@dimen/text_size"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_butttonHome"
+
+                android:text="Alterar senha do usuario"
+                />
+            <Button
+                android:background="@drawable/buttons"
+                android:id="@+id/completeCadastro"
+                android:textSize="@dimen/text_size"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_butttonHome"
+                android:text="Completar Cadastro"
+                />
+            <Button
+                android:background="@drawable/buttons"
+                android:id="@+id/removerConta"
+                android:textSize="@dimen/text_size"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_butttonHome"
+                android:text="Remover conta"
+                />
+
+
+        </LinearLayout>
+
+        <Button
+            android:background="@drawable/buttons"
+            android:layout_marginBottom="@dimen/margin_butttonHome"
+            android:id="@+id/sairApp"
+            android:textSize="@dimen/text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/FecharApp"
+
+            />
+    </LinearLayout>
+
+</LinearLayout>

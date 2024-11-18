@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home.ScreenHome"
+    android:orientation="vertical"
+    android:background="@color/Gainboro"
+
+    >
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/menuBar"
+        android:background="?attr/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:title="Inicio"
+        app:titleTextColor="@color/white"
+        android:fitsSystemWindows="true"
+
+        />
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="20dp">
+
+    <LinearLayout
+        android:elevation="5dp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/silver"
+        >
+
+        <ImageView
+            android:id="@+id/ImageUser"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_user_24"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/user_email"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Email: "
+                android:textSize="@dimen/text_size"
+                android:gravity="center"
+                android:textStyle="bold"/>
+            <TextView
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/name_user"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Nome: "
+                android:textSize="@dimen/text_size"
+                android:gravity="center"
+                android:textStyle="bold"/>
+            <TextView
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/cpf_user"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="CPF: "
+                android:textSize="@dimen/text_size"
+                android:gravity="center"
+                android:textStyle="bold"/>
+            <TextView
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/saldo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Saldo Previsto:  "
+                android:textSize="@dimen/text_size"
+                android:gravity="center"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            >
+
+            <Button
+                android:layout_marginTop="@dimen/margin_butttonHome"
+                android:id="@+id/Button_SaldoAtual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rendimento pessoal"
+                android:textSize="@dimen/text_size"
+                android:layout_marginBottom="@dimen/margin_butttonHome"
+                android:background="@drawable/buttons"
+                android:clickable="true"
+                android:focusable="true"
+
+                />
+            <Button
+                android:id="@+id/Button_AdicionarContas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Adicionar conta"
+                android:textSize="@dimen/text_size"
+                android:layout_marginBottom="@dimen/margin_butttonHome"
+                android:background="@drawable/buttons"
+                android:clickable="true"
+                android:focusable="true"
+
+                />
+            <Button
+                android:background="@drawable/buttons"
+                android:id="@+id/Button_Historico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Histórico parcelamento"
+                android:textSize="@dimen/text_size"
+                android:layout_marginBottom="@dimen/margin_butttonHome"
+                android:clickable="true"
+                android:focusable="true"
+                />
+            <Button
+                android:background="@drawable/buttons"
+                android:id="@+id/Butto_gerenciarCartoes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gerenciar Cartões"
+                android:textSize="@dimen/text_size"
+                android:layout_marginBottom="@dimen/margin_butttonHome"
+                android:clickable="true"
+                android:focusable="true"
+                />
+            <Button
+                android:background="@drawable/buttons"
+                android:id="@+id/Button_Dashboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dashboard"
+                android:textSize="@dimen/text_size"
+                android:layout_marginBottom="@dimen/margin_butttonHome"
+                android:clickable="true"
+                android:focusable="true"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

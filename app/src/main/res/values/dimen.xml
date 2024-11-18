@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="Text_header_size">30sp</dimen>
+    <dimen name="Button_text">15sp</dimen>
+    <dimen name="text_size">15sp</dimen>
+    <dimen name="text_size_edit">18sp</dimen>
+    <dimen name="container_login">350dp</dimen>
+    <dimen name="margin_edit_top">20dp</dimen>
+    <dimen name="margin_butttonHome">35dp</dimen>
+    <dimen name="padding_interno_botao">10dp</dimen>
+</resources>
