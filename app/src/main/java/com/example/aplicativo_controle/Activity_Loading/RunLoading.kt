@@ -1,13 +1,10 @@
-package com.example.aplicativo_controle.Loading
+package com.example.aplicativo_controle.Activity_Loading
 
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.os.Handler
-import android.os.Looper
-import com.example.aplicativo_controle.Cadastro.ScreenCadastro
 
- object RunLoading {
+object RunLoading {
 
      fun ExeLoading(activity: Class<out Activity>, context: Context) {
         val intent = Intent(context, activity)

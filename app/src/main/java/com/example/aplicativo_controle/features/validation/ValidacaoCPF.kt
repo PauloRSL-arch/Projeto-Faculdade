@@ -1,4 +1,4 @@
-package com.example.aplicativo_controle.Cadastro
+package com.example.aplicativo_controle.features.validation
 
 import com.example.aplicativo_controle.dataClassError.DataResult
 

@@ -5,19 +5,14 @@ import android.content.Context
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.aplicativo_controle.DataBase.AppDataBase
-import com.example.aplicativo_controle.Home.SaldoUsuario.HalfScreenSaldoUsuario
-import com.example.aplicativo_controle.Loading.Loading
-import com.example.aplicativo_controle.Loading.RunLoading
+import com.example.aplicativo_controle.Activity_Loading.Loading
+import com.example.aplicativo_controle.Activity_Loading.RunLoading
 import com.example.aplicativo_controle.Login.DadosUsuario
-import com.example.aplicativo_controle.Login.screenUser.ScreenUserConfig
-import com.example.aplicativo_controle.R
-import com.example.aplicativo_controle.Utils.HelperToolbar
+import com.example.aplicativo_controle.features.ActivityConfigUser.ScreenUserConfig
+import com.example.aplicativo_controle.features.utils.HelperToolbar
 import com.example.aplicativo_controle.databinding.ActivityScreenHomeBinding
-import com.example.aplicativo_controle.halfScreen.DialogHelper
-import com.example.aplicativo_controle.halfScreen.HalfScreenDialogFragment
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -55,9 +50,7 @@ class ScreenHome : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         viewDadosUsuario()
-        selectScreen(this)
         clickInfoUser(this) //binding para abrir ao clicar no nome
-
     }
 
     fun viewDadosUsuario(){
@@ -81,7 +74,6 @@ class ScreenHome : AppCompatActivity() {
                 binding.nameUser.text = EmailUser
                 binding.userEmail.text = nomeUser
                 binding.cpfUser.text = CpfUser
-                binding.saldo.text = saldoPrevisto
             }
         }
 
@@ -97,22 +89,5 @@ class ScreenHome : AppCompatActivity() {
             RunLoading.ExeLoading(ScreenUserConfig::class.java, context)
         }
     }
-
-    fun selectScreen(context: Context){
-        binding.ButtonSaldoAtual.setOnClickListener {
-            DialogHelper.openHalfScreenDialog(supportFragmentManager, HalfScreenSaldoUsuario.newInstance("ADD_INFO_SALDO"))
-        }
-
-    }
-
-//    fun HelperToolbar(title : String){
-//        val toolbar = binding.menuBar
-//        setSupportActionBar(toolbar)
-//        supportActionBar?.title = title
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-//
-//        toolbar.setNavigationOnClickListener{finish()}
-//    }
-
 }
 

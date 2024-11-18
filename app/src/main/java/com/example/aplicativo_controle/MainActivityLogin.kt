@@ -6,20 +6,21 @@ import android.os.Bundle
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
-import com.example.aplicativo_controle.Cadastro.ScreenCadastro
+import com.example.aplicativo_controle.features.cadastro.ScreenCadastro
 import com.example.aplicativo_controle.Home.ScreenHome
-import com.example.aplicativo_controle.Loading.Loading
-import com.example.aplicativo_controle.Loading.RunLoading
-import com.example.aplicativo_controle.Login.Login
+import com.example.aplicativo_controle.Activity_Loading.Loading
+import com.example.aplicativo_controle.Activity_Loading.RunLoading
+import com.example.aplicativo_controle.features.login.Login
 import com.example.aplicativo_controle.Notifications.NotificationApp
-import com.example.aplicativo_controle.Notifications.Toasts.ToastUtils
+import com.example.aplicativo_controle.features.utils.ToastUtils
 import com.example.aplicativo_controle.databinding.ActivityMainBinding
+import com.example.aplicativo_controle.features.utils.EyeViewPassword
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class MainActivity : AppCompatActivity() {
+class MainActivityLogin : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     val DadosUsuario = com.example.aplicativo_controle.Login.DadosUsuario.instance
     private val _loginResult = MutableLiveData<Boolean>()
@@ -36,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         EyeViewPassword.eyeOpen(binding.EditSenha)
         viewClickButtonCadastro()
         viewClickButtonLogin()
-
+        NotificationApp.validationCheckNotificationPost(this)
     }
 
 
@@ -57,7 +58,7 @@ class MainActivity : AppCompatActivity() {
 
             CoroutineScope(Dispatchers.IO).launch{
                 val loginSucess = Login.VerificaDadosLoginBanco(
-                    context = this@MainActivity,
+                    context = this@MainActivityLogin,
                     email = DadosUsuario.email,
                     senha = DadosUsuario.senha,
                     binding = binding
@@ -65,7 +66,7 @@ class MainActivity : AppCompatActivity() {
 
                 if (loginSucess.success){
                     finish()
-                    RunLoading.ExeLoading(ScreenHome::class.java,this@MainActivity)
+                    RunLoading.ExeLoading(ScreenHome::class.java,this@MainActivityLogin)
                     withContext(Dispatchers.Main) {
                         ToastUtils.showToast(loginSucess.menssage)
                     }
@@ -77,8 +78,8 @@ class MainActivity : AppCompatActivity() {
             }
             NotificationApp.CheckAndBuildNotification(
                 this,
-                DadosUsuario.email + "Logado com sucesso",
-                DadosUsuario.email
+                DadosUsuario.email + " Logado com sucesso",
+                DadosUsuario.name
             )
 
         }

@@ -2,24 +2,19 @@ package com.example.aplicativo_controle.halfScreen
 
 import android.content.Context
 import android.os.Bundle
-import android.provider.ContactsContract.CommonDataKinds.Email
 import android.text.InputType
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.lifecycleScope
-import com.bumptech.glide.util.Util
 import com.example.aplicativo_controle.DataBase.AppDataBase
-import com.example.aplicativo_controle.EyeViewPassword
+import com.example.aplicativo_controle.features.utils.EyeViewPassword
 import com.example.aplicativo_controle.Login.DadosUsuario
-import com.example.aplicativo_controle.Notifications.Toasts.ToastUtils
-import com.example.aplicativo_controle.R
+import com.example.aplicativo_controle.features.utils.ToastUtils
 import com.example.aplicativo_controle.dataClassError.DataResult
 import com.example.aplicativo_controle.databinding.FragmentRenameNameUserBinding
 import kotlinx.coroutines.DelicateCoroutinesApi
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class HalfScreenDialogFragment : DialogFragment() {

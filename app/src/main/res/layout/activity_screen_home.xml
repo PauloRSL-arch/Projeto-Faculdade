@@ -86,16 +86,6 @@
                 android:textSize="@dimen/text_size"
                 android:gravity="center"
                 android:textStyle="bold"/>
-            <TextView
-                android:clickable="true"
-                android:focusable="true"
-                android:id="@+id/saldo"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Saldo Previsto:  "
-                android:textSize="@dimen/text_size"
-                android:gravity="center"
-                android:textStyle="bold"/>
 
         </LinearLayout>
 
@@ -110,64 +100,7 @@
             android:gravity="center_vertical"
             >
 
-            <Button
-                android:layout_marginTop="@dimen/margin_butttonHome"
-                android:id="@+id/Button_SaldoAtual"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Rendimento pessoal"
-                android:textSize="@dimen/text_size"
-                android:layout_marginBottom="@dimen/margin_butttonHome"
-                android:background="@drawable/buttons"
-                android:clickable="true"
-                android:focusable="true"
 
-                />
-            <Button
-                android:id="@+id/Button_AdicionarContas"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Adicionar conta"
-                android:textSize="@dimen/text_size"
-                android:layout_marginBottom="@dimen/margin_butttonHome"
-                android:background="@drawable/buttons"
-                android:clickable="true"
-                android:focusable="true"
-
-                />
-            <Button
-                android:background="@drawable/buttons"
-                android:id="@+id/Button_Historico"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Histórico parcelamento"
-                android:textSize="@dimen/text_size"
-                android:layout_marginBottom="@dimen/margin_butttonHome"
-                android:clickable="true"
-                android:focusable="true"
-                />
-            <Button
-                android:background="@drawable/buttons"
-                android:id="@+id/Butto_gerenciarCartoes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Gerenciar Cartões"
-                android:textSize="@dimen/text_size"
-                android:layout_marginBottom="@dimen/margin_butttonHome"
-                android:clickable="true"
-                android:focusable="true"
-                />
-            <Button
-                android:background="@drawable/buttons"
-                android:id="@+id/Button_Dashboard"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Dashboard"
-                android:textSize="@dimen/text_size"
-                android:layout_marginBottom="@dimen/margin_butttonHome"
-                android:clickable="true"
-                android:focusable="true"
-                />
         </LinearLayout>
     </LinearLayout>
 

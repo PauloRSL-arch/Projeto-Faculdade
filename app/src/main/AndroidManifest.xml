@@ -18,17 +18,17 @@
             android:name=".halfScreen.HalfScreenDialogFragment"
             android:exported="false" />
         <activity
-            android:name=".Login.screenUser.ScreenUserConfig"
+            android:name=".features.ActivityConfigUser.ScreenUserConfig"
             android:exported="false" />
         <activity
-            android:name=".Loading.Loading"
+            android:name=".Activity_Loading.Loading"
             android:exported="false"
             android:theme="@style/Theme.Aplicativo_controle" />
         <activity
             android:name=".Home.ScreenHome"
             android:exported="false" />
         <activity
-            android:name=".Cadastro.ScreenCadastro"
+            android:name=".features.cadastro.ScreenCadastro"
             android:exported="false"/>
         <activity
             android:name=".Home.SaldoUsuario.HalfScreenSaldoUsuario"
@@ -36,7 +36,7 @@
             />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivityLogin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

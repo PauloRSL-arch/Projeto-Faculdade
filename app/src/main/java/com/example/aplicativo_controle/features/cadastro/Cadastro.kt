@@ -1,17 +1,13 @@
-package com.example.aplicativo_controle.Cadastro
+package com.example.aplicativo_controle.features.cadastro
 
 import android.content.Context
-import android.widget.Toast
 import com.example.aplicativo_controle.DataBase.AppDataBase
 import com.example.aplicativo_controle.DataBase.DAO.Itens_Dao
 import com.example.aplicativo_controle.DataBase.Models.Itens
 import com.example.aplicativo_controle.dataClassError.DataResult
-import com.example.aplicativo_controle.databinding.ActivityScreenHomeBinding
-import com.example.aplicativo_controle.databinding.ScreenCadastroBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
-import kotlinx.coroutines.withContext
 
 class Cadastro {
     private lateinit var userData: Itens_Dao

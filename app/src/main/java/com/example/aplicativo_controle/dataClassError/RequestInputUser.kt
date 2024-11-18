@@ -1,11 +1,6 @@
 package com.example.aplicativo_controle.dataClassError
 
-import android.content.Context
-import android.content.Intent
 import android.graphics.Color
-import com.example.aplicativo_controle.Cadastro.ScreenCadastro
-import com.example.aplicativo_controle.Notifications.Toasts.ToastUtils
-import com.example.aplicativo_controle.databinding.ActivityMainBinding
 import com.example.aplicativo_controle.databinding.ScreenCadastroBinding
 
 object RequestInputUser{

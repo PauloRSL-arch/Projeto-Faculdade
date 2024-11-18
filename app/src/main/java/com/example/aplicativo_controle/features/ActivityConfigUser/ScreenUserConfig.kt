@@ -1,9 +1,9 @@
-package com.example.aplicativo_controle.Login.screenUser
+package com.example.aplicativo_controle.features.ActivityConfigUser
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.example.aplicativo_controle.Utils.HelperToolbar
+import com.example.aplicativo_controle.features.utils.HelperToolbar
 import com.example.aplicativo_controle.databinding.ActivityScreenUserConfigBinding
 import com.example.aplicativo_controle.halfScreen.DialogHelper
 import com.example.aplicativo_controle.halfScreen.HalfScreenDialogFragment

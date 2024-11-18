@@ -1,7 +1,5 @@
-package com.example.aplicativo_controle.Utils
+package com.example.aplicativo_controle.features.utils
 
-import android.app.Activity
-import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 

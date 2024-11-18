@@ -1,4 +1,4 @@
-package com.example.aplicativo_controle.Notifications.Toasts
+package com.example.aplicativo_controle.features.utils
 
 import android.content.Context
 import android.util.Log

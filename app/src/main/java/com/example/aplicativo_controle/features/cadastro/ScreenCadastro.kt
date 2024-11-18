@@ -1,19 +1,20 @@
-package com.example.aplicativo_controle.Cadastro
+package com.example.aplicativo_controle.features.cadastro
 
 
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.aplicativo_controle.DataBase.AppDataBase
 import com.example.aplicativo_controle.DataBase.DAO.Itens_Dao
-import com.example.aplicativo_controle.EyeViewPassword
-import com.example.aplicativo_controle.Loading.RunLoading
+import com.example.aplicativo_controle.features.utils.EyeViewPassword
+import com.example.aplicativo_controle.Activity_Loading.RunLoading
 import com.example.aplicativo_controle.Login.DadosUsuario
-import com.example.aplicativo_controle.MainActivity
-import com.example.aplicativo_controle.Notifications.Toasts.ToastUtils
-import com.example.aplicativo_controle.Utils.HelperToolbar
+import com.example.aplicativo_controle.MainActivityLogin
+import com.example.aplicativo_controle.features.utils.ToastUtils
+import com.example.aplicativo_controle.features.utils.HelperToolbar
 import com.example.aplicativo_controle.dataClassError.RequestInputUser
 import com.example.aplicativo_controle.databinding.ScreenCadastroBinding
+import com.example.aplicativo_controle.features.utils.UtilsCadastro
+import com.example.aplicativo_controle.features.validation.ValidacaoCPF
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -69,7 +70,8 @@ class ScreenCadastro : AppCompatActivity() {
                             cpf_user = DadosUsuario.cpf,
                             context = this@ScreenCadastro
                         )
-                        DadosUsuario.id = UtilsCadastro.retornaIdUsuario(DadosUsuario.email,this@ScreenCadastro)
+                        DadosUsuario.id =
+                            UtilsCadastro.retornaIdUsuario(DadosUsuario.email, this@ScreenCadastro)
                         if (resultValidationCadastro.success) {
                             withContext(Dispatchers.Main) {
                                 binding.nameCompleto.text.clear()
@@ -78,7 +80,7 @@ class ScreenCadastro : AppCompatActivity() {
                                 binding.confirmaSenha.text.clear()
                                 ToastUtils.showToast(resultValidationCadastro.menssage)
                                 finish()
-                                RunLoading.ExeLoading(MainActivity::class.java,this@ScreenCadastro)
+                                RunLoading.ExeLoading(MainActivityLogin::class.java,this@ScreenCadastro)
                             }
                         } else {
                             withContext(Dispatchers.Main) {

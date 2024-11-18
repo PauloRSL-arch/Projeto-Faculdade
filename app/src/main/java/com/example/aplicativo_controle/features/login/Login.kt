@@ -1,4 +1,4 @@
-package com.example.aplicativo_controle.Login
+package com.example.aplicativo_controle.features.login
 
 import android.content.Context
 import com.example.aplicativo_controle.DataBase.AppDataBase
@@ -22,8 +22,8 @@ object Login {
         senha: String,
         binding: ActivityMainBinding
     ): DataResult {
-        this.DataBase = AppDataBase.getInstance(context) as AppDataBase
-        this.userData = DataBase.UserDao()
+        DataBase = AppDataBase.getInstance(context) as AppDataBase
+        userData = DataBase.UserDao()
 
         return CoroutineScope(Dispatchers.IO).async {
             val checkText = checkCadastro(
