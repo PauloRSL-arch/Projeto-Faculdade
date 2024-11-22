@@ -1,110 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/swipeRefresh"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Home.ScreenHome"
-    android:orientation="vertical"
-    android:background="@color/Gainboro"
-
-    >
-
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/menuBar"
-        android:background="?attr/colorPrimary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="4dp"
-        app:title="Inicio"
-        app:titleTextColor="@color/white"
-        android:fitsSystemWindows="true"
-
-        />
     <LinearLayout
-        android:layout_marginTop="20dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginHorizontal="20dp">
+        android:background="@color/Gainboro"
+        tools:context=".Home.ScreenHome">
 
-    <LinearLayout
-        android:elevation="5dp"
-        android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/silver"
-        >
-
-        <ImageView
-            android:id="@+id/ImageUser"
-            android:focusable="true"
-            android:clickable="true"
-            android:layout_width="60dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_user_24"/>
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/menuBar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center">
-            <TextView
-                android:id="@+id/user_email"
-                android:clickable="true"
-                android:focusable="true"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Email: "
-                android:textSize="@dimen/text_size"
-                android:gravity="center"
-                android:textStyle="bold"/>
-            <TextView
-                android:clickable="true"
-                android:focusable="true"
-                android:id="@+id/name_user"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Nome: "
-                android:textSize="@dimen/text_size"
-                android:gravity="center"
-                android:textStyle="bold"/>
-            <TextView
-                android:clickable="true"
-                android:focusable="true"
-                android:id="@+id/cpf_user"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="CPF: "
-                android:textSize="@dimen/text_size"
-                android:gravity="center"
-                android:textStyle="bold"/>
-
-        </LinearLayout>
-
-
-    </LinearLayout>
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:fitsSystemWindows="true"
+            app:title="Inicio"
+            app:titleTextColor="@color/white" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_margin="10dp"
-            android:gravity="center_vertical"
-            >
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/silver"
+                android:elevation="5dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/ImageUser"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_user_24"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/user_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Email: "
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/name_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Nome: "
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                    <TextView
+                        android:id="@+id/cpf_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="CPF: "
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Botão para redirecionar à tela de cálculo do IMC -->
+            <Button
+                android:id="@+id/btnCalculoIMC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Ir para Cálculo do IMC"
+                android:textSize="16sp"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColor="@color/white" />
 
         </LinearLayout>
+
     </LinearLayout>
-
-
-
-</LinearLayout>
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+

@@ -2,6 +2,7 @@ package com.example.aplicativo_controle.Home
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,7 @@ import com.example.aplicativo_controle.DataBase.AppDataBase
 import com.example.aplicativo_controle.Activity_Loading.Loading
 import com.example.aplicativo_controle.Activity_Loading.RunLoading
 import com.example.aplicativo_controle.Login.DadosUsuario
+import com.example.aplicativo_controle.TeladeCalculo
 import com.example.aplicativo_controle.features.ActivityConfigUser.ScreenUserConfig
 import com.example.aplicativo_controle.features.utils.HelperToolbar
 import com.example.aplicativo_controle.databinding.ActivityScreenHomeBinding
@@ -20,7 +22,7 @@ import kotlinx.coroutines.withContext
 
 class ScreenHome : AppCompatActivity() {
     private lateinit var binding: ActivityScreenHomeBinding
-    private lateinit var  swipe : SwipeRefreshLayout
+    private lateinit var swipe: SwipeRefreshLayout
 
     @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +34,13 @@ class ScreenHome : AppCompatActivity() {
         this.binding = ActivityScreenHomeBinding.inflate(layoutInflater)
         enableEdgeToEdge()
         setContentView(this.binding.root)
-        HelperToolbar.CreateToolbar("Inicio", binding.menuBar,this)
+        HelperToolbar.CreateToolbar("Inicio", binding.menuBar, this)
+
+        // Implementação do botão para redirecionar à tela de cálculo do IMC
+        binding.btnCalculoIMC.setOnClickListener {
+            val intent = Intent(this, TeladeCalculo::class.java)
+            startActivity(intent)
+        }
     }
 
     @SuppressLint("ResourceType")
@@ -40,25 +48,25 @@ class ScreenHome : AppCompatActivity() {
         super.onResume()
         viewDadosUsuario()
 
-        binding.swipeRefresh.setOnRefreshListener{
+        binding.swipeRefresh.setOnRefreshListener {
             viewDadosUsuario()
             binding.swipeRefresh.isRefreshing = false
         }
-        HelperToolbar.CreateToolbar("Inicio", binding.menuBar,this)
+        HelperToolbar.CreateToolbar("Inicio", binding.menuBar, this)
     }
 
     override fun onStart() {
         super.onStart()
         viewDadosUsuario()
-        clickInfoUser(this) //binding para abrir ao clicar no nome
+        clickInfoUser(this) // binding para abrir ao clicar no nome
     }
 
-    fun viewDadosUsuario(){
+    fun viewDadosUsuario() {
         val DataBase = AppDataBase.getInstance(this) as AppDataBase
         val userData = DataBase.UserDao()
         CoroutineScope(Dispatchers.IO).launch {
             val userInfor = userData.findUserByEmail(DadosUsuario.instance.email)
-            withContext(Dispatchers.Main){
+            withContext(Dispatchers.Main) {
 
                 DadosUsuario.instance.email = userInfor!!.email
                 DadosUsuario.instance.name = userInfor.nome
@@ -76,9 +84,9 @@ class ScreenHome : AppCompatActivity() {
                 binding.cpfUser.text = CpfUser
             }
         }
-
     }
-    fun clickInfoUser(context: Context){
+
+    fun clickInfoUser(context: Context) {
         binding.ImageUser.setOnClickListener {
             RunLoading.ExeLoading(ScreenUserConfig::class.java, context)
         }
@@ -90,4 +98,5 @@ class ScreenHome : AppCompatActivity() {
         }
     }
 }
+
 
